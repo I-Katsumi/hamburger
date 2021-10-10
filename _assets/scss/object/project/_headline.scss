@@ -1,0 +1,63 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+
+.p-headline {
+    position: relative;
+    &::before{
+        content: "";
+        position  : absolute;
+        background: variable.$bg--heading;
+        top       : 0;
+        left      : 0;
+        width     : 100%;
+        height    : 100%;
+    }
+    &__image {
+        width          : 100%;
+        height         : 283px;
+        object-fit     : cover;
+        object-position: left;
+        @include mixin.breakpoint(pc) {
+            height: 239px;
+            object-position: center;
+        }
+        &--sp {
+            display: block;
+            @include mixin.breakpoint(pc) {
+                display: none;
+            }
+        }
+        &--pc {
+            display: none;
+            @include mixin.breakpoint(pc) {
+                display: block;
+            }
+        }
+    }
+    &__item {
+        position: absolute;
+        left          : 0;
+        top           : 50%;
+        transform     : translateY(-50%);
+        padding-left  : 40px;
+        vertical-align: middle;
+        color         : #fff;
+        line-height   : 1.5;
+        font-family   : variable.$font--roboto;
+        font-size: 3.6rem;
+        @include mixin.breakpoint(tab) {
+            padding-left: 80px;
+            font-size   : 4.8rem;
+        }
+    }
+    &__title {
+        display  : block;
+        font-size: 1.6rem;
+        @include mixin.breakpoint(tab) {
+        display       : inline;
+        margin-left   : 20px;
+        vertical-align: middle;
+        }
+    }
+}

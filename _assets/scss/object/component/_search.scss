@@ -1,0 +1,59 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+// ==============================================================
+//  検索ボックス
+// ==============================================================
+.c-search{
+    display: flex;
+    display: inline-block;
+
+    &__box {
+        position: relative;
+
+        &__keyword,&__submit {
+            border        : 1px solid variable.$c--default;
+            border-radius : 10px;
+            height        : 46px;
+            vertical-align: bottom;
+        }
+
+        &__keyword {
+            color:variable.$c--default;
+            padding-left: 55px;
+            margin-right: 5px;
+            background  : #fff;
+            width       : 230px;
+            @include mixin.breakpoint(tab) {
+                width    : 47.482vw;
+                max-width: 396px;
+            }
+            @include mixin.breakpoint(pc) {
+                width: 23vw;
+            }
+        }
+
+        &__submit {
+            background: variable.$bg--search;
+            font-weight: 700;
+            width      : 78px;
+            @include mixin.breakpoint(tab) {
+                width    : 16.307vw;
+                max-width: 136px;
+            }
+            @include mixin.breakpoint(pc) {
+                width    : 7vw;
+                max-width: 136px;
+            }
+        }
+
+        &__icon {
+            position : absolute;
+            top      : 50%;
+            transform: translateY(-50%);
+            left     : 0;
+            font-size: 2.5rem;
+            padding  : 0 15px;
+        }
+    }
+}

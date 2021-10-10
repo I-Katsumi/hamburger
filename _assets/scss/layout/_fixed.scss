@@ -1,0 +1,30 @@
+@use '../foundation/variable';
+@use '../foundation/mixin';
+
+.l-fixed {
+    overflow-x: hidden;
+    &.is-active {
+        position  : fixed;
+        width     : 100%;
+        overflow-y: hidden;
+    }
+    &__background {
+        content: "";
+        position  : fixed;
+        top       : 0;
+        left      : 0;
+        display   : block;
+        width     : 0;
+        height    : 0;
+        background: variable.$bg--fixed;
+        opacity   : 0;
+        transition: opacity 0.5s;
+        z-index   : 20;
+        font-size : 0;
+        &.is-active {
+            width  : 100%;
+            height : 100%;
+            opacity: 1;
+        }
+    }
+}

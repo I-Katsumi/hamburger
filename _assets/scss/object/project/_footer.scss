@@ -1,0 +1,23 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+// ==============================================================
+//  フッター
+// ==============================================================
+
+.p-footer {
+    background-image: url(../img/footer_bg.png);
+    background-size : cover;
+    text-align      : center;
+    color           : #fff;
+    &__nav {
+        display        : flex;
+        justify-content: center;
+        font-size      : 2rem;
+        padding-top    : 35px;
+        padding-bottom : 25px;
+        &__partition {
+            padding: 0 10px;
+        }
+    }
+}

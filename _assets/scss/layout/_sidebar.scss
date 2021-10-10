@@ -1,0 +1,25 @@
+@use '../foundation/variable';
+@use '../foundation/mixin';
+
+.l-sidebar {
+    position  : fixed;
+    background: variable.$bg--sidebar;
+    width     : 328px;
+    height    : 100vh;
+    right     : -130%;
+    top       : 0;
+    overflow-y: auto;
+    z-index   : 100;
+    @include mixin.breakpoint(pc) {
+        position  : static;
+        width     : 19.115vw;
+        height    : 100%;
+        max-width : 367px;
+        min-width : 260px;
+        overflow-y: visible;
+    }
+
+    &.is-active {
+        right: 0;
+    }
+}

@@ -1,0 +1,50 @@
+.p-main__mainvisual {
+  position: relative;
+}
+.p-main__mainvisual__image {
+  width: 100%;
+  height: 100%;
+}
+.p-main__mainvisual__image--tab {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .p-main__mainvisual__image--tab {
+    display: block;
+  }
+}
+.p-main__mainvisual__image--sp {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  .p-main__mainvisual__image--sp {
+    display: none;
+  }
+}
+.p-main__mainvisual__title {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding-left: 30px;
+  font-size: 3.6rem;
+}
+@media screen and (min-width: 600px) {
+  .p-main__mainvisual__title {
+    padding-left: 80px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-main__mainvisual__title {
+    font-size: 4rem;
+  }
+}
+
+.test2 {
+  width: 100%;
+  height: 283px;
+  object-fit: cover;
+  object-position: left;
+}
+/*# sourceMappingURL=mainvisual.css.map */

@@ -1,0 +1,22 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.p-slideIn-Out {
+    &__button {
+        position: absolute;
+        &--In {
+            top  : 10px;
+            right: 10px;
+            @include mixin.breakpoint(pc) {
+                display: none;
+            }
+        }
+        &--Out {
+            right: 10px;
+            top  : 20px;
+            @include mixin.breakpoint(pc) {
+                display: none;
+            }
+        }
+    }
+}

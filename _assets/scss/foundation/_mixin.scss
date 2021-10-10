@@ -1,0 +1,15 @@
+@charset "UFT-8";
+// ==============================================================
+//  break points
+// ==============================================================
+
+$breakpoint: (
+  tab: 'screen and (min-width: 600px)',
+  pc : 'screen and (min-width: 1025px)'
+);
+
+@mixin breakpoint($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}

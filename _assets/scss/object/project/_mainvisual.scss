@@ -1,0 +1,40 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.p-mainvisual {
+    position: relative;
+    &__image {
+        width : 100%;
+        height: 100%;
+        &--tab {
+            display: none;
+            @include mixin.breakpoint(tab) {
+                display: block;
+            }
+        }
+        &--sp {
+            display: block;
+            @include mixin.breakpoint(tab) {
+                display: none;
+            }
+        }
+    }
+    &__title {
+        position    : absolute;
+        left        : 0;
+        top         : 50%;
+        transform   : translateY(-50%);
+        color       : #fff;
+        padding-left: 30px;
+        font-size   : 3.6rem;
+        @include mixin.breakpoint(tab) {
+            padding-left: 80px;
+        }
+        @include mixin.breakpoint(pc) {
+            font-size: 4rem;
+        }
+    
+    }
+
+}
+

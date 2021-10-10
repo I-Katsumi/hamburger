@@ -1,0 +1,37 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+// ==============================================================
+//  ヘッダー
+// ==============================================================
+
+
+.p-header{
+    background: variable.$bg--header;
+    height    : 217px;
+    &__inner {
+        text-align : center;
+        padding-top: 30px;
+        @include mixin.breakpoint(pc) {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            height         : 100%;
+            padding        : 0 30px 0 50px;
+        }
+    }
+    &__logo {
+        font-family: variable.$font--roboto;
+        font-size  :4rem;
+        font-weight: 700;
+        @include mixin.breakpoint(pc) {
+            font-size:6.4rem;
+        }
+    }
+    &__search {
+        padding-top: 30px;
+        @include mixin.breakpoint(pc) {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+// ==============================================================
+//  Menuの文字
+// ==============================================================
+
+.c-logo {
+    font-family: variable.$font--roboto;
+    font-size  : 2rem;
+    font-weight: 700;
+    @include mixin.breakpoint(tab) {
+        font-size: 3.4rem;
+    }
+}

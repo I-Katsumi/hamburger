@@ -1,0 +1,31 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+// ==============================================================
+//  サイドバーのバツボタン
+// ==============================================================
+
+.c-mark{
+    display : block;
+    width   : 45px;/*枠の大きさ*/
+    height  : 45px;/*枠の大きさ*/
+    position: relative;
+    z-index : 10;
+}
+
+.c-mark::before, .c-mark::after{
+    content: "";
+    position  : absolute;
+    display   : block;
+    width     : 100%;/*バツ線の長さ*/
+    height    : 6px;/*バツ線の太さ*/
+    background: variable.$c--default;
+    transform : translateY(20px) rotate(45deg);
+}
+
+.c-mark::after{
+    transform:translateY(20px) rotate(-45deg);
+}
+
+
+

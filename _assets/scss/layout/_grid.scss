@@ -1,0 +1,62 @@
+
+@use '../foundation/variable';
+@use '../foundation/mixin';
+
+
+.l-grid {
+    display      : grid;
+    grid-template:
+        "header" 217px
+        "main  " auto
+        "footer" 150px;
+
+    @include mixin.breakpoint(pc) {
+        display      : grid;
+        grid-template:
+            "header  side-bar" 217px
+            "main    side-bar" auto
+            "footer  footer  " 150px
+            /1fr auto;
+    }
+
+    &--header {
+        width    : 100%;
+        grid-area: header;
+    }
+
+    &--main {
+        grid-area: main;
+    }
+
+    &--sidebar {
+        grid-area: side-bar;
+    }
+
+    &--footer {
+        width    : 100%;
+        grid-area: footer;
+    }
+
+    &--panel {
+        display: grid;
+        row-gap: 2rem;
+        height: 100%;
+        width: 100%;
+        @include mixin.breakpoint(tab) {
+            grid-template-columns: 1fr 1fr;
+            column-gap           : 5%;
+            row-gap              : 0;
+        }
+        @include mixin.breakpoint(pc) {
+            column-gap: 6%;
+        }
+        // &__item {
+        //     display           : grid;
+        //     grid-template-rows: 1fr ;
+        //     width             : 100%;
+        //     height            : 100%;
+        // }
+    }
+
+}
+
