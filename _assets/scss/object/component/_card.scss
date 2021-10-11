@@ -2,11 +2,8 @@
 @use '../../foundation/mixin';
 
 
-// まだ途中
-
 .c-card {
-    padding-bottom: 30px;
-    background: red;
+    padding-bottom: 20px;
     display       : flex;
     flex-direction: column;
     @include mixin.breakpoint(tab) {
@@ -40,27 +37,32 @@
             font-weight: 700;
             font-size  : 2.0rem;
             padding    : 10px 0;
+            white-space: nowrap;
             @include mixin.breakpoint(tab) {
                 padding-bottom: 10px;
+                font-size: max(2.4vw, 18px);
             }
             @include mixin.breakpoint(pc) {
                 font-size: 3.6rem;
+                font-size: max(1.87vw, 22px);
             }
         }
         &__main {
-            max-height    : 150px;
+            height    : 152px;
             overflow      : hidden;
             width         : 80%;
             padding-bottom: 30px;
             @include mixin.breakpoint(tab) {
-                width: 95%;
+                width      : 95%;
+                // max-height : 152px;
+
             }
             &__title {
                 font-weight: 700;
                 font-size  : 1.6rem;
                 padding    : 5px 0;
                 @include mixin.breakpoint(pc) {
-                    font-size: 2.4rem;
+                    font-size: 2.0rem;
                     padding: 10px 0;
                 }
             }
@@ -71,7 +73,7 @@
         }
         &__button {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             padding-bottom: 20px;
             @include mixin.breakpoint(tab) {
                 padding-top: 40px;
@@ -80,41 +82,6 @@
     }
 }
 
-// .btn {
-//     text-align: center;
-// //     display: flex;
-// // justify-content: center;
-// padding-top: 30px;
-// padding-bottom: 20px;
-// @include mixin.breakpoint(tab) {
-//     padding-top: 40px;
-// }
-// }
-.c-button {
-    background: #ccc;
-    // width: 55%;
-    // height: 76px;
-    // min-width: 200px;
-    padding: 10px 15% ;
-    @include mixin.breakpoint(pc) {
-        padding: 25px 20% ;
-    }
-
-
-}
-// .test3 {
-    
-//     width: 80%;
-//     max-height: 160px;
-//     overflow: hidden;
-//     @include mixin.breakpoint(tab) {
-//         width: 95%;
-//         max-height: 155px;
-
-
-//     }
-// }
-// kokokara
 // .c-card {
 //     display: grid;
 //     grid-template-columns: 1fr;

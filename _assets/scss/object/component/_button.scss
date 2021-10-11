@@ -9,7 +9,13 @@
     justify-content: center;
     align-items    : center;
     font-size      : 1.6rem;
-    background: pink;
-    
-    border-radius: 60px;
+    background     : #fff;
+    color          : variable.$c--default;
+    font-weight    : 700;
+    border-radius  : 60px;
+    padding        : 10px 15% ;
+    @include mixin.breakpoint(pc) {
+        padding: 25px 20% ;
+    }
 }
+

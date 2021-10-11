@@ -398,11 +398,11 @@ a {
   }
 }
 
-.l-content {
+.l-outside {
   padding: 5%;
 }
 @media screen and (min-width: 1025px) {
-  .l-content {
+  .l-outside {
     padding: 7%;
   }
 }
@@ -467,8 +467,16 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  background: pink;
+  background: #fff;
+  color: #707070;
+  font-weight: 700;
   border-radius: 60px;
+  padding: 10px 15%;
+}
+@media screen and (min-width: 1025px) {
+  .c-button {
+    padding: 25px 20%;
+  }
 }
 
 .c-mark {
@@ -644,8 +652,7 @@ a {
 }
 
 .c-card {
-  padding-bottom: 30px;
-  background: red;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -689,19 +696,22 @@ a {
   font-weight: 700;
   font-size: 2rem;
   padding: 10px 0;
+  white-space: nowrap;
 }
 @media screen and (min-width: 600px) {
   .c-card__item__heading {
     padding-bottom: 10px;
+    font-size: max(2.4vw, 18px);
   }
 }
 @media screen and (min-width: 1025px) {
   .c-card__item__heading {
     font-size: 3.6rem;
+    font-size: max(1.87vw, 22px);
   }
 }
 .c-card__item__main {
-  max-height: 150px;
+  height: 152px;
   overflow: hidden;
   width: 80%;
   padding-bottom: 30px;
@@ -718,7 +728,7 @@ a {
 }
 @media screen and (min-width: 1025px) {
   .c-card__item__main__title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding: 10px 0;
   }
 }
@@ -728,7 +738,7 @@ a {
 }
 .c-card__item__button {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 600px) {
@@ -737,14 +747,86 @@ a {
   }
 }
 
-.c-button {
-  background: #ccc;
-  padding: 10px 15%;
+.c-pagination {
+  display: flex;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 20px 5%;
+  align-items: center;
+  justify-content: space-between;
 }
-@media screen and (min-width: 1025px) {
-  .c-button {
-    padding: 25px 20%;
+@media screen and (min-width: 600px) {
+  .c-pagination {
+    justify-content: center;
+    padding: 30px 0;
   }
+}
+@media screen and (min-width: 600px) and (min-width: 1025px) {
+  .c-pagination {
+    padding-bottom: 60px;
+  }
+}
+.c-pagination__title {
+  margin-right: 0.8%;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .c-pagination__title {
+    display: block;
+  }
+}
+.c-pagination__number {
+  border: solid 1px;
+  margin: 0 0.8%;
+  text-align: center;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .c-pagination__number {
+    display: block;
+  }
+}
+.c-pagination__link {
+  display: block;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+}
+.c-pagination__pre {
+  text-align: center;
+  font-weight: 400;
+}
+.c-pagination__pre span::after {
+  content: " 前へ";
+}
+@media screen and (min-width: 600px) {
+  .c-pagination__pre span::after {
+    display: none;
+  }
+}
+.c-pagination__next {
+  margin-right: 15px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .c-pagination__next {
+    margin-right: 0;
+  }
+}
+.c-pagination__next span::before {
+  content: "次へ ";
+  font-weight: 400;
+}
+@media screen and (min-width: 600px) {
+  .c-pagination__next span::before {
+    display: none;
+  }
+}
+.c-pagination__current {
+  background: #3C2B1C;
+  color: #fff;
 }
 
 .p-header {
