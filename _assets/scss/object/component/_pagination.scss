@@ -6,30 +6,31 @@
     display        : flex;
     white-space    : nowrap;
     font-size      : 1.6rem;
-    font-family: variable.$font--roboto;
+    font-family    : variable.$font--roboto;
     font-weight    : 700;
-    padding: 20px 5%;
+    padding        : 25px 5%;
     align-items    : center;
     justify-content: space-between;
     @include mixin.breakpoint(tab) {
         justify-content: center;
-        padding: 30px 0;
+        padding        : 30px 0;
     @include mixin.breakpoint(pc) {
-        padding-bottom: 60px;
+        padding: 65px 0;
     }
 }
     &__title {
         margin-right: 0.8%;
-        display: none;
+        display     : none;
         @include mixin.breakpoint(tab) {
             display: block;
         }
     }
     &__number {
-        border    : solid 1px ;
+        border    : solid 1px variable.$c--default;
         margin    : 0 0.8%;
         text-align: center;
         display   : none;
+        background: #fff;
         @include mixin.breakpoint(tab) {
             display: block;
         }
@@ -54,7 +55,7 @@
     }
     &__next {
         margin-right: 15px;
-        text-align: center;
+        text-align  : center;
         @include mixin.breakpoint(tab) {
             margin-right: 0;
         }
@@ -69,23 +70,5 @@
     &__current {
         background: variable.$bg--card;
         color: #fff;
-
     }
 }
-// .this {
-//     background: #000;
-// }
-
-// .c-pagination__pre span::after {
-//     content: " 前へ";
-//     @include mixin.breakpoint(tab) {
-//         display: none;
-//     }
-// }
-// .c-pagination__next span::before {
-//     content: "次へ ";
-//     @include mixin.breakpoint(tab) {
-//         display: none;
-//     }
-
-// }

@@ -1,0 +1,25 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.p-content {
+    padding-bottom: 20px;
+    @include mixin.breakpoint(tab) {
+        padding-bottom: 35px;
+    }
+    @include mixin.breakpoint(pc) {
+        padding-bottom: 70px;
+    }
+    &__title {
+        font-size: 2.8rem;
+        color: variable.$c--brown;
+        padding-bottom: 25px;
+        @include mixin.breakpoint(tab) {
+            font-size: 3.6rem;
+        }
+    }
+    &__text {
+        line-height: 1.45;
+        color: variable.$c--brown;
+
+    }
+}

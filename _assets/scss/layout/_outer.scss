@@ -1,0 +1,35 @@
+@use '../foundation/variable';
+@use '../foundation/mixin';
+
+.l-outer {
+    &--panel {
+        padding: 5%;
+        @include mixin.breakpoint(pc) {
+            padding: 7%;
+        }
+    }
+    &--content {
+        padding: 25px 5% 10px 5%;
+        @include mixin.breakpoint(tab) {
+            padding: 30px 5% 50px 5%;
+        }
+        @include mixin.breakpoint(pc) {
+            padding: 50px 6%;
+        }
+    }
+    &--single {
+        padding: 20px 5% 180px 5%;
+        @include mixin.breakpoint(tab) {
+            padding: 45px 7% 230px 7%;
+        }
+        @include mixin.breakpoint(pc) {
+            padding: 50px 6% 350px 6%;
+        }
+
+
+    }
+}
+
+// .test {
+//     font-size: 3.6rem;
+// }

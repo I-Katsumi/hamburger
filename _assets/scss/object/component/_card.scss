@@ -9,6 +9,9 @@
     @include mixin.breakpoint(tab) {
         flex-direction: row;
     }
+    @include mixin.breakpoint(pc) {
+        padding-bottom: 30px;
+    }
     &__image {
         width          : 100%;
         object-fit     : cover;
@@ -40,40 +43,38 @@
             white-space: nowrap;
             @include mixin.breakpoint(tab) {
                 padding-bottom: 10px;
-                font-size: max(2.4vw, 18px);
+                font-size: max(2.4vw, 1.8rem);
             }
             @include mixin.breakpoint(pc) {
-                font-size: 3.6rem;
-                font-size: max(1.87vw, 22px);
+                font-size     : max(1.87vw, 2.2rem);
+                padding-bottom: 25px;
             }
         }
         &__main {
-            height    : 152px;
+            height        : 152px;
             overflow      : hidden;
             width         : 80%;
             padding-bottom: 30px;
             @include mixin.breakpoint(tab) {
-                width      : 95%;
-                // max-height : 152px;
-
+                width: 95%;
             }
             &__title {
                 font-weight: 700;
                 font-size  : 1.6rem;
                 padding    : 5px 0;
                 @include mixin.breakpoint(pc) {
-                    font-size: 2.0rem;
-                    padding: 10px 0;
+                    font-size: max(1.25vw, 2.0rem);
+                    padding  : 10px 0;
                 }
             }
             &__text {
-                font-size: 1.6rem;
+                font-size  : 1.6rem;
                 line-height: 1.5;
             }
         }
         &__button {
-            text-align: center;
-            padding-top: 40px;
+            text-align    : center;
+            padding-top   : 40px;
             padding-bottom: 20px;
             @include mixin.breakpoint(tab) {
                 padding-top: 40px;
@@ -82,63 +83,3 @@
     }
 }
 
-// .c-card {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//         @include mixin.breakpoint(tab) {
-//             display: grid;
-//             grid-template-columns: 1fr 1fr;
-//             }
-
-//     &__image {
-//         width: 100%;
-//         height         : 100%;
-//         object-fit     : cover;
-//                 object-position: left;
-
-//         display: inline;
-//         vertical-align: bottom;
-//     }
-//     &__item {
-//         padding: 20px 5%;
-//         background: pink;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         @include mixin.breakpoint(tab) {
-//             padding: 20px 10%;
-
-//         }
-//         @include mixin.breakpoint(pc) {
-//             padding: 40px 10%;
-//         }
-
-//         &__title {
-//             padding: 10px 0;
-//                 font-size: 2.0rem;
-//             // @include mixin.breakpoint(tab) {
-//             //     padding-bottom: 10px;
-
-//             // }
-//             @include mixin.breakpoint(pc) {
-//                 font-size: 3.6rem;
-//             }
-//         }
-//         &__subtitle {
-//             padding: 5px 0;
-//             @include mixin.breakpoint(pc) {
-//                 font-size: 2.4rem;
-//                 padding: 10px 0;
-
-//             }
-
-//         }
-//         &__text {
-//             line-height: 1.5;
-//             @include mixin.breakpoint(pc) {
-//                 font-size: 1.6rem;
-//             }
-
-//         }
-//     }
-// }

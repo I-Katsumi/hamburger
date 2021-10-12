@@ -4,21 +4,34 @@
 .p-mainvisual {
     position: relative;
     &__image {
-        width : 100%;
-        height: 100%;
-        &--tab {
-            display: none;
-            @include mixin.breakpoint(tab) {
+        &--front {
+            width : 100%;
+            height: 100%;
+            &--tab {
+                display: none;
+                @include mixin.breakpoint(tab) {
+                    display: block;
+                }
+            }
+            &--sp {
                 display: block;
+                @include mixin.breakpoint(tab) {
+                    display: none;
+                }
             }
         }
-        &--sp {
-            display: block;
+        &--single {
+            height         : 225px;
+            object-position: center;
+            object-fit     : cover;
+            width          : 100%;
             @include mixin.breakpoint(tab) {
-                display: none;
+                height: 500px;
             }
         }
     }
+
+
     &__title {
         position    : absolute;
         left        : 0;
@@ -26,15 +39,93 @@
         transform   : translateY(-50%);
         color       : #fff;
         padding-left: 30px;
-        font-size   : 3.6rem;
         @include mixin.breakpoint(tab) {
             padding-left: 80px;
         }
         @include mixin.breakpoint(pc) {
             font-size: 4rem;
         }
-    
+        &--front {
+            font-size: 3.6rem;
+        }
+        &--single {
+            font-size: 3.6rem;
+            @include mixin.breakpoint(tab) {
+                font-size: min(7.2vw, 6.0rem);
+            }
+        }
     }
-
 }
 
+
+
+
+// .p-mainvisual {
+//     position: relative;
+
+
+//     &--front{
+//         &__image {
+//             width : 100%;
+//             height: 100%;
+//             &--tab {
+//                 display: none;
+//                 @include mixin.breakpoint(tab) {
+//                     display: block;
+//                 }
+//             }
+//             &--sp {
+//                 display: block;
+//                 @include mixin.breakpoint(tab) {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+//     &--page {
+//         &__image {
+//             height         : 225px;
+//             object-position: center;
+//             object-fit     : cover;
+//             width          : 100%;
+//             @include mixin.breakpoint(tab) {
+//                 height: 500px;
+//             }
+//         }
+//     }
+//     &__title {
+//         position    : absolute;
+//         left        : 0;
+//         top         : 50%;
+//         transform   : translateY(-50%);
+//         color       : #fff;
+//         padding-left: 30px;
+//         font-size   : 3.6rem;
+//         @include mixin.breakpoint(tab) {
+//             padding-left: 80px;
+//         }
+//         @include mixin.breakpoint(pc) {
+//             font-size: 4rem;
+//         }
+//     }
+// }
+
+
+
+
+    // &__image {
+    //     // width : 100%;
+    //     // height: 100%;
+    //     &--tab {
+    //         display: none;
+    //         @include mixin.breakpoint(tab) {
+    //             display: block;
+    //         }
+    //     }
+    //     &--sp {
+    //         display: block;
+    //         @include mixin.breakpoint(tab) {
+    //             display: none;
+    //         }
+    //     }
+    // }
