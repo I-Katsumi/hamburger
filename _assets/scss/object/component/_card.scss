@@ -1,40 +1,56 @@
 @use '../../foundation/variable';
 @use '../../foundation/mixin';
 
-
+// .harf {
+//     width: 50%;
+// }
 .c-card {
     padding-bottom: 20px;
     display       : flex;
     flex-direction: column;
+    
     @include mixin.breakpoint(tab) {
         flex-direction: row;
+        width: 100%;
     }
     @include mixin.breakpoint(pc) {
         padding-bottom: 30px;
     }
+    
     &__image {
-        width          : 100%;
-        object-fit     : cover;
-        object-position: left;
-        display: block;
+        width: 100%;
         @include mixin.breakpoint(tab) {
             width: 50%;
         }
-    }
-    &__item {
-        display        : flex;
-        flex-direction : column;
-        justify-content: space-between;
-        background: variable.$bg--card;
-        color  : #fff;
-        width  : 100%;
-                padding: 20px 5%;
-        @include mixin.breakpoint(tab) {
-            width  : 50%;
-            padding: 20px 5%;
+        & img {
+            object-fit     : cover;
+            object-position: left;
+            display: block;
+            height: 100%;
+            width: 100%;
+            max-height: 465px;
         }
-        @include mixin.breakpoint(pc) {
-            padding: 40px 5%;
+    }
+    &__item{
+        width: 100%;
+        @include mixin.breakpoint(tab) {
+            width: 50%;
+        }
+        &__inner{
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
+            background: variable.$bg--card;
+            color  : #fff;
+            width  : 100%;
+                    padding: 20px 5%;
+            @include mixin.breakpoint(tab) {
+                // width  : 50%;
+                padding: 20px 5%;
+            }
+            @include mixin.breakpoint(pc) {
+                padding: 40px 5%;
+            }
         }
         &__heading {
             font-weight: 700;
@@ -46,32 +62,12 @@
                 font-size: max(2.4vw, 1.8rem);
             }
             @include mixin.breakpoint(pc) {
-                font-size     : max(1.87vw, 2.2rem);
+                // font-size     : max(1.87vw, 2.2rem);
+                font-size: clamp(1.8rem, 2.4vw, 3.6rem);
                 padding-bottom: 25px;
             }
         }
-        &__main {
-            height        : 152px;
-            overflow      : hidden;
-            width         : 80%;
-            padding-bottom: 30px;
-            @include mixin.breakpoint(tab) {
-                width: 95%;
-            }
-            &__title {
-                font-weight: 700;
-                font-size  : 1.6rem;
-                padding    : 5px 0;
-                @include mixin.breakpoint(pc) {
-                    font-size: max(1.25vw, 2.0rem);
-                    padding  : 10px 0;
-                }
-            }
-            &__text {
-                font-size  : 1.6rem;
-                line-height: 1.5;
-            }
-        }
+
         &__button {
             text-align    : center;
             padding-top   : 40px;
@@ -82,4 +78,84 @@
         }
     }
 }
+// .c-card {
+//     padding-bottom: 20px;
+//     display       : flex;
+//     flex-direction: column;
+//     @include mixin.breakpoint(tab) {
+//         flex-direction: row;
+//     }
+//     @include mixin.breakpoint(pc) {
+//         padding-bottom: 30px;
+//     }
+//     &__image {
+//         width          : 100%;
+//         object-fit     : cover;
+//         object-position: left;
+//         display: block;
+//         @include mixin.breakpoint(tab) {
+//             width: 50%;
+//         }
+//     }
+//     &__item {
+//         display        : flex;
+//         flex-direction : column;
+//         justify-content: space-between;
+//         background: variable.$bg--card;
+//         color  : #fff;
+//         width  : 100%;
+//                 padding: 20px 5%;
+//         @include mixin.breakpoint(tab) {
+//             width  : 50%;
+//             padding: 20px 5%;
+//         }
+//         @include mixin.breakpoint(pc) {
+//             padding: 40px 5%;
+//         }
+//         &__heading {
+//             font-weight: 700;
+//             font-size  : 2.0rem;
+//             padding    : 10px 0;
+//             white-space: nowrap;
+//             @include mixin.breakpoint(tab) {
+//                 padding-bottom: 10px;
+//                 font-size: max(2.4vw, 1.8rem);
+//             }
+//             @include mixin.breakpoint(pc) {
+//                 font-size     : max(1.87vw, 2.2rem);
+//                 padding-bottom: 25px;
+//             }
+//         }
+//         &__main {
+//             height        : 152px;
+//             overflow      : hidden;
+//             width         : 80%;
+//             padding-bottom: 30px;
+//             @include mixin.breakpoint(tab) {
+//                 width: 95%;
+//             }
+//             &__title {
+//                 font-weight: 700;
+//                 font-size  : 1.6rem;
+//                 padding    : 5px 0;
+//                 @include mixin.breakpoint(pc) {
+//                     font-size: max(1.25vw, 2.0rem);
+//                     padding  : 10px 0;
+//                 }
+//             }
+//             &__text {
+//                 font-size  : 1.6rem;
+//                 line-height: 1.5;
+//             }
+//         }
+//         &__button {
+//             text-align    : center;
+//             padding-top   : 40px;
+//             padding-bottom: 20px;
+//             @include mixin.breakpoint(tab) {
+//                 padding-top: 40px;
+//             }
+//         }
+//     }
+// }
 

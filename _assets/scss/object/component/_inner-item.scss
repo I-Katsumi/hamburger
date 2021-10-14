@@ -1,0 +1,51 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.c-inner-item {
+    &--card {
+        height        : 152px;
+        overflow      : hidden;
+        width         : 80%;
+        padding-bottom: 30px;
+        @include mixin.breakpoint(tab) {
+            width: 95%;
+        }
+        &__title {
+            font-weight: 700;
+            font-size  : 1.6rem;
+            padding    : 5px 0;
+            @include mixin.breakpoint(pc) {
+                font-size: max(1.25vw, 2.0rem);
+                padding  : 10px 0;
+            }
+        }
+        &__text {
+            font-size  : 1.6rem;
+            line-height: 1.5;
+        }
+    }
+    &--panel {
+        &__list{
+            background: variable.$bg--panel-text;
+            height    : 172px;
+            display   : inline-block;
+            width     : 100%;
+            padding   : 10px;
+            &:first-child{
+                margin-bottom: 12px;
+                @include mixin.breakpoint(pc) {
+                margin-bottom: 4%;
+                }
+            }
+            &__title {
+                font-weight: 700;
+                font-size  : 2.2rem;
+                padding    : 10px 0;
+            }
+            &__text {
+                padding: 5px 0;
+                width: 100%;
+            }
+        }
+    }
+}
