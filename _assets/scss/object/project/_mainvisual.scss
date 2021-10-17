@@ -20,7 +20,8 @@
                 }
             }
         }
-        &--single {
+        &--single,
+        &--page {
             height         : 225px;
             object-position: center;
             object-fit     : cover;
@@ -30,8 +31,6 @@
             }
         }
     }
-
-
     &__title {
         position    : absolute;
         left        : 0;
@@ -48,7 +47,8 @@
         &--front {
             font-size: 3.6rem;
         }
-        &--single {
+        &--single,
+        &--page {
             font-size: 3.6rem;
             @include mixin.breakpoint(tab) {
                 font-size: min(7.2vw, 6.0rem);

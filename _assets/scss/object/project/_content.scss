@@ -3,23 +3,22 @@
 
 .p-content {
     padding-bottom: 20px;
+    color: variable.$c--brown;
     @include mixin.breakpoint(tab) {
-        padding-bottom: 35px;
+        padding-bottom: 40px;
     }
     @include mixin.breakpoint(pc) {
         padding-bottom: 70px;
     }
     &__title {
         font-size: 2.8rem;
-        color: variable.$c--brown;
         padding-bottom: 25px;
         @include mixin.breakpoint(tab) {
             font-size: 3.6rem;
+            padding-bottom: 20px;
         }
     }
     &__text {
         line-height: 1.45;
-        color: variable.$c--brown;
-
     }
 }

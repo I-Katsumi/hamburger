@@ -17,15 +17,18 @@
             height        : 46px;
             vertical-align: bottom;
         }
-
         &__keyword {
-            color:variable.$c--default;
-            padding-left: 55px;
-            margin-right: 5px;
-            background  : #fff;
-            width       : 230px;
+            border        : 1px solid variable.$c--default;
+            border-radius : 10px;
+            height        : 46px;
+            vertical-align: bottom;
+            color         :variable.$c--default;
+            padding-left  : 55px;
+            margin-right  : 5px;
+            background    : #fff;
+            width         : 230px;
             @include mixin.breakpoint(tab) {
-                width    : 47.482vw;
+                width    : 47vw;
                 max-width: 396px;
             }
             @include mixin.breakpoint(pc) {

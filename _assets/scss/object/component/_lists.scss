@@ -1,0 +1,25 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.c-lists {
+    color        : variable.$c--brown;
+    line-height  : 1.45;
+    margin-bottom: 30px;
+    @include mixin.breakpoint(tab) {
+        padding-left: 50px;
+        margin-bottom: 60px;
+    }
+        &__list {
+            margin-bottom: 55px;
+            &--ol ol {
+                list-style-type: decimal;
+                padding-left   : 20px;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        &__lv2 {
+            padding: 20px;
+        }
+    }
+}

@@ -26,13 +26,14 @@
         z-index       : 10;
         color         : #fff;
         font-weight   : 700;
-        padding       : 30px;
+        padding       : 40px;
         pointer-events: none;
+        min-height: 415px;
         @include mixin.breakpoint(pc) {
             height   : 100%;
             width    : 60%;
             min-width: 650px;
-            padding  : 50px 5vw;
+            padding  : 75px 6vw 20px 6vw;
         }
         &::after{
             content: "";
@@ -51,9 +52,10 @@
         &__title {
             font-size     : 3rem;
             position      : relative;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             @include mixin.breakpoint(pc) {
-                padding-bottom: 50px;
+                padding-bottom: 60px;
+                font-size: 3.6rem;
             }
             &::after {
                 content: "";
@@ -66,9 +68,13 @@
             }
         }
         &__text {
-            padding: 20px 0;
+            padding    : 10px 0;
+            font-size  : 1.4rem;
+            line-height: 2.5;
             @include mixin.breakpoint(pc) {
-                padding: 50px 0;
+                padding: 60px 0;
+                font-size: 1.6rem;
+                line-height: 2;
             }
         }
     }

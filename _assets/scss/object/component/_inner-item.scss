@@ -8,7 +8,7 @@
         width         : 80%;
         padding-bottom: 30px;
         @include mixin.breakpoint(tab) {
-            width: 95%;
+            width: 90%;
         }
         &__title {
             font-weight: 700;
@@ -31,6 +31,9 @@
             display   : inline-block;
             width     : 100%;
             padding   : 10px;
+            @include mixin.breakpoint(pc) {
+                padding: 10px 20px;
+            }
             &:first-child{
                 margin-bottom: 12px;
                 @include mixin.breakpoint(pc) {

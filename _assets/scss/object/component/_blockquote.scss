@@ -1,14 +1,17 @@
 @use '../../foundation/variable';
 @use '../../foundation/mixin';
 
-.p-blockquote {
+.c-blockquote {
     color     : variable.$c--brown;
     background: variable.$bg--blockquote;
     margin-bottom: 30px;
+    @include mixin.breakpoint(tab) {
+        margin-bottom: 70px;
+    }
     &__inner {
-        padding: 20px;
+        padding: 30px 20px;
         @include mixin.breakpoint(tab) {
-            padding: 50px;
+            padding: 45px 50px;
         }
     }
     &__text {
@@ -23,4 +26,3 @@
         color          : variable.$c--blue;
     }
 }
-

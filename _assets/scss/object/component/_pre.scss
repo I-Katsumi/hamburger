@@ -1,0 +1,13 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.c-pre {
+    background   : variable.$bg--pre;
+    line-height  : 1.45;
+    padding      : 30px 20px;
+    color        : variable.$c--brown;
+    margin-bottom: 30px;
+    @include mixin.breakpoint(tab) {
+        margin-bottom: 60px;
+    }
+}

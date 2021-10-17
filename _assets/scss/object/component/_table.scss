@@ -1,0 +1,25 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.p-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: variable.$c--brown;
+    background: #fff;
+    margin-bottom: 30px;
+    @include mixin.breakpoint(tab) {
+        margin-bottom: 60px;
+    }
+    &__list {
+        &__item {
+            border: 1px solid variable.$c--default;
+            padding: 25px;
+            &--left {
+                width: 40%;
+                @include mixin.breakpoint(tab) {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
