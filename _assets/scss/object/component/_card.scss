@@ -1,35 +1,36 @@
 @use '../../foundation/variable';
 @use '../../foundation/mixin';
 
+
 .c-card {
-    padding-bottom: 20px;
-    display       : flex;
-    flex-direction: column;
+    margin-bottom: 20px;
     @include mixin.breakpoint(tab) {
-        flex-direction: row;
-        width         : 100%;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
-    &__image {
+    &__inner {
+        display       : flex;
+        flex-direction: column;
+        @include mixin.breakpoint(tab) {
+            flex-direction: row;
+            width         : 100%;
+        }
+    }
+    &__img {
+        width          : 100%;
+        object-fit     : cover;
+        object-position: left;
+        display: block;
+        @include mixin.breakpoint(tab) {
+            width: 50%;
+            max-height: 460px;
+        }
+    }
+    &__item {
         width: 100%;
         @include mixin.breakpoint(tab) {
             width: 50%;
         }
-        & img {
-            object-fit     : cover;
-            object-position: left;
-            display        : block;
-            height         : 100%;
-            width          : 100%;
-            max-height     : 460px;
-        }
-    }
-    &__item{
-        width: 100%;
-        @include mixin.breakpoint(tab) {
-            width: 50%;
-        }
-        &__inner{
+        &__inner {
             display        : flex;
             flex-direction : column;
             justify-content: space-between;
@@ -58,7 +59,6 @@
                 padding-bottom: 25px;
             }
         }
-
         &__button {
             margin        : 0 auto;
             text-align    : center;
@@ -85,3 +85,89 @@
         }
     }
 }
+
+
+// .c-card {
+//     padding-bottom: 20px;
+//     display       : flex;
+//     flex-direction: column;
+//     @include mixin.breakpoint(tab) {
+//         flex-direction: row;
+//         width         : 100%;
+//         padding-bottom: 30px;
+//     }
+//     &__image {
+//         width: 100%;
+//         @include mixin.breakpoint(tab) {
+//             width: 50%;
+//         }
+//         & img {
+//             object-fit     : cover;
+//             object-position: left;
+//             display        : block;
+//             height         : 100%;
+//             width          : 100%;
+//             max-height     : 460px;
+//         }
+//     }
+//     &__item{
+//         width: 100%;
+//         @include mixin.breakpoint(tab) {
+//             width: 50%;
+//         }
+//         &__inner{
+//             display        : flex;
+//             flex-direction : column;
+//             justify-content: space-between;
+//             background     : variable.$bg--card;
+//             color          : #fff;
+//             width          : 100%;
+//             padding        : 20px 5%;
+//             @include mixin.breakpoint(tab) {
+//                 padding: 20px 8%;
+//             }
+//             @include mixin.breakpoint(pc) {
+//                 padding: 40px 8%;
+//             }
+//         }
+//         &__heading {
+//             font-weight: 700;
+//             font-size  : 2.0rem;
+//             padding    : 10px 0;
+//             white-space: nowrap;
+//             @include mixin.breakpoint(tab) {
+//                 padding-bottom: 10px;
+//                 font-size: max(2.4vw, 1.85rem);
+//             }
+//             @include mixin.breakpoint(pc) {
+//                 font-size     : clamp(1.8rem, 2.3vw, 3.6rem);
+//                 padding-bottom: 25px;
+//             }
+//         }
+
+//         &__button {
+//             margin        : 0 auto;
+//             text-align    : center;
+//             padding-top   : 45px;
+//             padding-bottom: 20px;
+//             @include mixin.breakpoint(pc) {
+//                 padding-top   : 40px;
+//                 padding-bottom: 15px;
+//             }
+//             &__link {
+//                 background   : #fff;
+//                 color        : variable.$c--default;
+//                 padding      : 8px;
+//                 border-radius: 60px;
+//                 font-weight  : 700;
+//                 display      : inline-block;
+//                 width        : 163px;
+//                 @include mixin.breakpoint(pc) {
+//                     padding  : 25px;
+//                     width    : 20vw;
+//                     max-width: 292px;
+//                 }
+//             }
+//         }
+//     }
+// }

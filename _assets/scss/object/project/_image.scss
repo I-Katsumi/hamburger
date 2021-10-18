@@ -22,21 +22,21 @@
         @include mixin.breakpoint(pc) {
             margin-bottom: 50px;
         }
-        &:last-child {
-            margin-bottom: 0;
-        }
         &__unit {
-            display       : flex;
-            flex-direction: row;
             margin-bottom : 45px;
-            @include mixin.breakpoint(tab) {
-                margin-bottom: 120px;
-            }
+            // @include mixin.breakpoint(tab) {
+            //     margin-bottom: 120px;
+            // }
             @include mixin.breakpoint(pc) {
                 margin-bottom: 40px;
             }
+            &:last-child {
+                margin-bottom: 0;
+            }
             &:nth-child(even) {
-                flex-direction: row-reverse;
+                & .p-image--sidebyside__inner {
+                    flex-direction: row-reverse;
+                }
                 & .p-image--sidebyside__item {
                     padding-right: 15px;
                     @include mixin.breakpoint(tab) {
@@ -58,18 +58,16 @@
                     }
                 }
             }
-            &:last-child {
-                margin-bottom: 0;
-            }
+        }
+        &__inner {
+            display       : flex;
+            flex-direction: row;
         }
         &__image {
-            width: 42%;
-            img {
                 display   : block;
-                width     : 100%;
-                height    : auto;
+                width     : 42%;
+                height    : 100%;
                 object-fit: cover;
-            }
         }
         &__item {
             width     : 58%;
@@ -86,8 +84,7 @@
                 }
             }
         }
-    }
-    &--center {
+    }    &--center {
         display        : flex;
         justify-content: center;
         margin-bottom  : 30px;
