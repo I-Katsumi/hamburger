@@ -27,6 +27,7 @@
             margin-right  : 5px;
             background    : #fff;
             width         : 230px;
+            font-weight   : 700;
             @include mixin.breakpoint(tab) {
                 width    : 47vw;
                 max-width: 396px;

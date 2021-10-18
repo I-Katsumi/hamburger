@@ -573,6 +573,7 @@ a {
   margin-right: 5px;
   background: #fff;
   width: 230px;
+  font-weight: 700;
 }
 @media screen and (min-width: 600px) {
   .c-search__box__keyword {
