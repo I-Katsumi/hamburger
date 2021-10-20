@@ -1,24 +1,13 @@
 @use '../../foundation/variable';
 @use '../../foundation/mixin';
 
+
 .p-mainvisual {
     position: relative;
     &__image {
         &--front {
             width : 100%;
             height: 100%;
-            &--tab {
-                display: none;
-                @include mixin.breakpoint(tab) {
-                    display: block;
-                }
-            }
-            &--sp {
-                display: block;
-                @include mixin.breakpoint(tab) {
-                    display: none;
-                }
-            }
         }
         &--single,
         &--page {

@@ -1,0 +1,17 @@
+@use '../../foundation/variable';
+@use '../../foundation/mixin';
+
+.u-display {
+    &--sp {
+        display: block;
+        @include mixin.breakpoint(tab) {
+            display: none;
+        }
+    }
+    &--tab {
+        display: none;
+        @include mixin.breakpoint(tab) {
+            display: block;
+        }
+    }
+}
